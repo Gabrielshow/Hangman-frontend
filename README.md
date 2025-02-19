@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Hangman Game (React + Flask)
 
-Currently, two official plugins are available:
+This project is a simple yet engaging Hangman game where users can guess letters to uncover a hidden word. The backend is powered by Flask and handles all the game logic, while the frontend is built using React and TypeScript for an interactive user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Backend
+Built using Flask for handling game logic and RESTful API endpoints.
+CORS enabled for smooth communication with the frontend.
+Frontend
+Built using React and TypeScript for dynamic rendering and state management.
+User-friendly interface with input fields, guess button, and visual feedback on guesses.
+Toast notifications to show win/loss messages and game status.
+Installation & Setup
+Clone this repository to your local machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Features
+
+- Game Flow: Users are prompted to guess letters, with the game progressing based on the number of lives left.
+- Game End Handling: If the user runs out of lives, they lose, and if they guess all the letters correctly, they win.
+- New Game Option: Users can start a fresh game by clicking the "New Game" button.
+- Responsive Interface: Built with React and styled for a smooth user experience.
+
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Gabrielshow/Hangman-frontend.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Go to the project directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+  cd my-project
 ```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+For the backend, clone
+```bash
+  git clone https://github.com/Gabrielshow/Hangman-backend.git
+```
+ and then run: 
+ ```bash
+ pip install -r requirements.txt
+```
+
+Start the backend server with
+```bash
+ python server.py.
+```
+Open your browser and enjoy the game!
+
